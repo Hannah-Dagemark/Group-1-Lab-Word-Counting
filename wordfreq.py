@@ -24,7 +24,7 @@ def tokenize(lines: list[str]) -> list[str]:
 	for line in lines:
 		word_type = CharType.NONE
 		current_word = []
-		for i, char in enumerate(line.lower()):
+		for i, char in enumerate(line.strip().lower()):
 			if len(current_word) == 0:
 				ct = char_type(char)
 				if ct == CharType.SPACE:
